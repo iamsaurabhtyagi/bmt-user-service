@@ -32,7 +32,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("User Service API")
                         .version("v1")
-                        .description("API documentation for User Services"))
+                        .description("API documentation for getting, adding, updating user details and user registration Services"))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName,
