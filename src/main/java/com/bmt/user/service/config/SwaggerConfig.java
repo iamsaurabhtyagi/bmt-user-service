@@ -5,21 +5,27 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 @Configuration
-public class OpenApiConfig {
+public class SwaggerConfig {
 
     @Bean
     public OpenAPI customOpenAPI() {
         final String securitySchemeName = "bearerAuth";
 
         return new OpenAPI()
+                .servers(List.of(
+                        new Server().url("http://localhost:8765/user-service")
+                ))
                 .info(new Info()
-                        .title("BMT User Service API")
-                        .version("1.0")
-                        .description("API documentation for BMT User Service"))
+                        .title("User Service API")
+                        .version("v1")
+                        .description("API documentation for User Services"))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName,
@@ -30,4 +36,3 @@ public class OpenApiConfig {
                                         .bearerFormat("JWT")));
     }
 }
-
