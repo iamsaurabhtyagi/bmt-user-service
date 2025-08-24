@@ -108,7 +108,11 @@ public class UserProfileConverter {
     public static FamilyInformation modelToFamilyInformationEntity(FamilyDetailsRequest familyDetailsRequest) {
         FamilyInformation familyInformation = new FamilyInformation();
 
-        familyInformation.setName(familyInformation.getName());
+        familyInformation.setName(familyDetailsRequest.getName());
+        familyInformation.setRelationship(familyDetailsRequest.getRelationship());
+        familyInformation.setDataOfBirth(familyDetailsRequest.getDataOfBirth());
+        familyInformation.setMaritalStatus(familyDetailsRequest.getMaritalStatus());
+        familyInformation.setMarriageAnniversary(familyDetailsRequest.getMarriageAnniversary());
 
         return familyInformation;
     }

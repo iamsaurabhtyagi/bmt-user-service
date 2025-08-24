@@ -46,6 +46,14 @@ public class GlobalExceptionHandler {
                 .body(ApiResponse.failure("Invalid OTP", errorDetails, request.getRequestURI()));
     }
 
+    @ExceptionHandler(NoUserInformationException.class)
+    public ResponseEntity<ApiResponse<Void>> handleNoUserInformationException(NoUserInformationException ex, HttpServletRequest request) {
+        Map<String, String> errorDetails = Map.of("reason", ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(ApiResponse.failure("No User Information", errorDetails, request.getRequestURI()));
+    }
+
     /**
      * Method to handle incorrect arguments received in request body using validation framework
      *
