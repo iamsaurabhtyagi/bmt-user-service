@@ -134,7 +134,7 @@ public class UserServiceImpl implements UserService {
     public String updatePassword(UUID id, ChangePasswordRequest request) {
         User existingUser = findById(id);
 
-        if(!request.getOldPassword().equals(existingUser.getPassword()))
+        if(!passwordEncoder.matches(request.getOldPassword(), existingUser.getPassword()))
             throw new InvalidCredentialException("Invalid User or Password");
 
         existingUser = UserConverter.requestToEntityToResetPassword(existingUser, request);
