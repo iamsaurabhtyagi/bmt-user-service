@@ -14,6 +14,13 @@ import java.util.List;
 @Configuration
 public class SwaggerConfig {
 
+    /*@Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .servers(List.of(new Server().url("http://localhost:8765/user-service")))
+                .info(new Info().title("User Service API").version("v1"));
+    }*/
+
     @Bean
     public OpenAPI customOpenAPI() {
         final String securitySchemeName = "bearerAuth";
