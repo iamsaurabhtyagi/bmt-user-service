@@ -1,5 +1,6 @@
 package com.bmt.user.service.service;
 
+import com.bmt.exception.InvalidCredentialException;
 import com.bmt.exception.InvalidOtpException;
 import com.bmt.exception.OtpExpiredException;
 import com.bmt.exception.UserNotFoundException;
@@ -7,6 +8,7 @@ import com.bmt.user.service.controller.converter.UserConverter;
 import com.bmt.user.service.dao.UserDao;
 import com.bmt.user.service.security.JwtUtil;
 import com.bmt.user.service.view.request.AuthRequest;
+import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.model.user.*;
 import com.bmt.user.service.view.request.UserRequest;
@@ -129,8 +131,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String updatePassword(UUID id, UserRequest request) {
+    public String updatePassword(UUID id, ChangePasswordRequest request) {
         User existingUser = findById(id);
+
+        if(!request.getOldPassword().equals(existingUser.getPassword()))
+            throw new InvalidCredentialException("Invalid User or Password");
 
         existingUser = UserConverter.requestToEntityToResetPassword(existingUser, request);
         userDao.save(existingUser);

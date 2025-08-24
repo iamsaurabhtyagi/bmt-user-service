@@ -3,6 +3,7 @@ package com.bmt.user.service.controller;
 import com.bmt.exception.ApiResponse;
 import com.bmt.user.service.service.UserService;
 import com.bmt.user.service.view.request.AuthRequest;
+import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.AuthResponse;
@@ -46,7 +47,7 @@ public class UserController {
     }
 
     @PutMapping(value = "/reset/password/{id}")
-    public ResponseEntity<ApiResponse<String>> resetPassword(@PathVariable UUID id, @RequestBody UserRequest request) {
+    public ResponseEntity<ApiResponse<String>> resetPassword(@PathVariable UUID id, @RequestBody ChangePasswordRequest request) {
         String response = userService.updatePassword(id, request);
         return ResponseEntity.ok(ApiResponse.success("Password Reset", response));
     }

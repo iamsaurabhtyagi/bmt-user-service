@@ -1,6 +1,7 @@
 package com.bmt.user.service.service;
 
 import com.bmt.user.service.view.request.AuthRequest;
+import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.AuthResponse;
@@ -20,7 +21,7 @@ public interface UserService {
 
     UserResponse update(UUID id, UserRequest userRequest);
 
-    String updatePassword(UUID id, UserRequest request);
+    String updatePassword(UUID id, ChangePasswordRequest request);
 
     UserResponse verifyOtpForMobileUpdate(OTPRequest otpRequest);
 

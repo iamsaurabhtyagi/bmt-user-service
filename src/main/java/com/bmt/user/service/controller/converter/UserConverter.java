@@ -1,5 +1,6 @@
 package com.bmt.user.service.controller.converter;
 
+import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.UserResponse;
@@ -36,11 +37,11 @@ public class UserConverter {
         return user;
     }
 
-    public static User requestToEntityToResetPassword(User existingUser, UserRequest request) {
+    public static User requestToEntityToResetPassword(User existingUser, ChangePasswordRequest request) {
         if(existingUser == null)
             existingUser = new User();
 
-        existingUser.setPassword(request.getPassword());
+        existingUser.setPassword(request.getNewPassword());
 
         return existingUser;
     }
