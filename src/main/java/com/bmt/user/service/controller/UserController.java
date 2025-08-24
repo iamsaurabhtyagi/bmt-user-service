@@ -47,16 +47,13 @@ public class UserController {
 
     @PutMapping(value = "/reset/password/{id}")
     public ResponseEntity<ApiResponse<String>> resetPassword(@PathVariable UUID id, @RequestBody UserRequest request) {
-
         String response = userService.updatePassword(id, request);
         return ResponseEntity.ok(ApiResponse.success("Password Reset", response));
     }
 
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ApiResponse<UserResponse>> updateProfile(@PathVariable UUID id, @RequestBody UserRequest userRequest) {
-
         UserResponse response = userService.update(id, userRequest);
-
         return ResponseEntity.ok(ApiResponse.success("User Updated", response));
     }
 
@@ -66,7 +63,7 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User Detail", response));
     }
 
-    @GetMapping(value = "/all", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ApiResponse<List<UserResponse>>> getAll() {
         List<UserResponse> responseList = userService.getAll();
         return ResponseEntity.ok(ApiResponse.success("User Details", responseList));
