@@ -1,6 +1,6 @@
 package com.bmt.user.service.service;
 
-import com.bmt.exception.UserAlreadyRegisteredException;
+import com.common.exception.UserAlreadyRegisteredException;
 import com.common.model.user.*;
 import com.bmt.user.service.controller.converter.UnverifiedUserConverter;
 import com.bmt.user.service.dao.UnverifiedUserDao;

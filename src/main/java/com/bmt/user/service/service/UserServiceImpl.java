@@ -1,9 +1,9 @@
 package com.bmt.user.service.service;
 
-import com.bmt.exception.InvalidCredentialException;
-import com.bmt.exception.InvalidOtpException;
-import com.bmt.exception.OtpExpiredException;
-import com.bmt.exception.UserNotFoundException;
+import com.common.exception.InvalidCredentialException;
+import com.common.exception.InvalidOtpException;
+import com.common.exception.OtpExpiredException;
+import com.common.exception.UserNotFoundException;
 import com.bmt.user.service.controller.converter.UserConverter;
 import com.bmt.user.service.dao.UserDao;
 import com.bmt.user.service.security.JwtUtil;

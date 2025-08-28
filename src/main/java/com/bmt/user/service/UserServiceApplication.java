@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
 @EntityScan(basePackages = {
-		"com.common.model"                      // <- if used
+		"com.common"                      // <- if used
 })
 public class UserServiceApplication {
 

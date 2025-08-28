@@ -1,7 +1,7 @@
 package com.bmt.user.service.service;
 
-import com.bmt.exception.NoUserInformationException;
-import com.bmt.exception.UserNotFoundException;
+import com.common.exception.NoUserInformationException;
+import com.common.exception.UserNotFoundException;
 import com.common.model.user.FamilyInformation;
 import com.common.model.user.PersonalInformation;
 import com.common.model.user.User;
