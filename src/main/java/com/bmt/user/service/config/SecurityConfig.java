@@ -14,6 +14,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.context.SecurityContextHolderFilter;
 
 import javax.crypto.spec.SecretKeySpec;
 
@@ -48,7 +50,8 @@ public class SecurityConfig {
                                 "/swagger-ui.html").permitAll() // open APIs
                         .anyRequest().authenticated() // all others require JWT
                 )
-                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults())); // ✅ non-deprecated
+                // register your filter before UsernamePasswordAuthenticationFilter
+                .addFilterBefore(jwtAuthenticationFilter, SecurityContextHolderFilter.class);
 
         return http.build();
     }
