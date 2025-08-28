@@ -1,7 +1,7 @@
 package com.bmt.user.service.view.request;
 
-import com.bmt.model.user.UserStatus;
-import com.bmt.model.user.UserType;
+import com.common.model.user.UserStatus;
+import com.common.model.user.UserType;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.bmt.user.service.service;
 
-import com.bmt.model.user.OtpToken;
+import com.common.model.user.OtpToken;
 
 public interface OtpTokenService {
     OtpToken updateOtpTokenStatus(OtpToken otpToken);

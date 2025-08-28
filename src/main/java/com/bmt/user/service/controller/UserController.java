@@ -1,6 +1,5 @@
 package com.bmt.user.service.controller;
 
-import com.bmt.exception.ApiResponse;
 import com.bmt.user.service.service.UserService;
 import com.bmt.user.service.view.request.AuthRequest;
 import com.bmt.user.service.view.request.ChangePasswordRequest;
@@ -8,6 +7,7 @@ import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.AuthResponse;
 import com.bmt.user.service.view.response.UserResponse;
+import com.common.response.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

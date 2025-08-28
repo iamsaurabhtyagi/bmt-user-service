@@ -1,6 +1,5 @@
 package com.bmt.user.service.controller;
 
-import com.bmt.exception.ApiResponse;
 import com.bmt.user.service.service.UserProfileService;
 import com.bmt.user.service.view.request.AddressRequest;
 import com.bmt.user.service.view.request.FamilyDetailsRequest;
@@ -8,6 +7,7 @@ import com.bmt.user.service.view.request.PersonalDetailsRequest;
 import com.bmt.user.service.view.response.AddressResponse;
 import com.bmt.user.service.view.response.FamilyDetailsResponse;
 import com.bmt.user.service.view.response.PersonalDetailsResponse;
+import com.common.response.ApiResponse;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

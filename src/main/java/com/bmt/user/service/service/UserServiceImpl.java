@@ -10,7 +10,7 @@ import com.bmt.user.service.security.JwtUtil;
 import com.bmt.user.service.view.request.AuthRequest;
 import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
-import com.bmt.model.user.*;
+import com.common.model.user.*;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.AuthResponse;
 import com.bmt.user.service.view.response.UserResponse;

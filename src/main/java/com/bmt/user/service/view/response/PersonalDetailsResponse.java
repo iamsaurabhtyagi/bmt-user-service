@@ -1,6 +1,6 @@
 package com.bmt.user.service.view.response;
 
-import com.bmt.model.user.Gender;
+import com.common.model.user.Gender;
 import lombok.Data;
 
 import java.time.LocalDate;

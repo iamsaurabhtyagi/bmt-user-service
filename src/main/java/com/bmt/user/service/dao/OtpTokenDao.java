@@ -1,6 +1,6 @@
 package com.bmt.user.service.dao;
 
-import com.bmt.model.user.OtpToken;
+import com.common.model.user.OtpToken;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;

@@ -1,7 +1,7 @@
 package com.bmt.user.service.service;
 
 import com.bmt.user.service.dao.OtpTokenDao;
-import com.bmt.model.user.OtpToken;
+import com.common.model.user.OtpToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,10 @@
 package com.bmt.user.service.advice;
 
-import com.bmt.exception.*;
+import com.common.exception.InvalidOtpException;
+import com.common.exception.NoUserInformationException;
+import com.common.exception.UserAlreadyRegisteredException;
+import com.common.exception.UserNotFoundException;
+import com.common.response.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.bmt.user.service.service;
 
-import com.bmt.model.user.UnverifiedUser;
+import com.common.model.user.UnverifiedUser;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 

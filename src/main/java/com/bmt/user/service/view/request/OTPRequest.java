@@ -1,6 +1,6 @@
 package com.bmt.user.service.view.request;
 
-import com.bmt.model.user.OtpPurpose;
+import com.common.model.user.OtpPurpose;
 import jakarta.validation.constraints.AssertTrue;
 import lombok.Getter;
 import lombok.Setter;

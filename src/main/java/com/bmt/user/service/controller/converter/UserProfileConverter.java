@@ -1,8 +1,8 @@
 package com.bmt.user.service.controller.converter;
 
-import com.bmt.model.user.FamilyInformation;
-import com.bmt.model.user.PersonalInformation;
-import com.bmt.model.user.UserAddress;
+import com.common.model.user.FamilyInformation;
+import com.common.model.user.PersonalInformation;
+import com.common.model.user.UserAddress;
 import com.bmt.user.service.view.request.AddressRequest;
 import com.bmt.user.service.view.request.FamilyDetailsRequest;
 import com.bmt.user.service.view.request.PersonalDetailsRequest;

@@ -1,6 +1,6 @@
 package com.bmt.user.service.dao;
 
-import com.bmt.model.user.UnverifiedUser;
+import com.common.model.user.UnverifiedUser;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

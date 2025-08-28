@@ -1,9 +1,9 @@
 package com.bmt.user.service.controller;
 
-import com.bmt.exception.ApiResponse;
 import com.bmt.user.service.service.UnverifiedUserService;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
+import com.common.response.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

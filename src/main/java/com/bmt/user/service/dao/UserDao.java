@@ -1,7 +1,7 @@
 package com.bmt.user.service.dao;
 
-import com.bmt.model.user.User;
-import com.bmt.model.user.UserStatus;
+import com.common.model.user.User;
+import com.common.model.user.UserStatus;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Date;

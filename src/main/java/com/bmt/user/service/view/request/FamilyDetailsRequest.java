@@ -1,6 +1,6 @@
 package com.bmt.user.service.view.request;
 
-import com.bmt.model.user.MaritalStatus;
+import com.common.model.user.MaritalStatus;
 import lombok.Data;
 
 import java.time.LocalDate;

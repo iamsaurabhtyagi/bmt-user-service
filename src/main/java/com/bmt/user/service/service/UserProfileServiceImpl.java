@@ -2,10 +2,10 @@ package com.bmt.user.service.service;
 
 import com.bmt.exception.NoUserInformationException;
 import com.bmt.exception.UserNotFoundException;
-import com.bmt.model.user.FamilyInformation;
-import com.bmt.model.user.PersonalInformation;
-import com.bmt.model.user.User;
-import com.bmt.model.user.UserAddress;
+import com.common.model.user.FamilyInformation;
+import com.common.model.user.PersonalInformation;
+import com.common.model.user.User;
+import com.common.model.user.UserAddress;
 import com.bmt.user.service.controller.UserProfileController;
 import com.bmt.user.service.controller.converter.UserProfileConverter;
 import com.bmt.user.service.dao.UserDao;

@@ -4,7 +4,7 @@ import com.bmt.user.service.view.request.ChangePasswordRequest;
 import com.bmt.user.service.view.request.OTPRequest;
 import com.bmt.user.service.view.request.UserRequest;
 import com.bmt.user.service.view.response.UserResponse;
-import com.bmt.model.user.*;
+import com.common.model.user.*;
 
 import java.util.List;
 
